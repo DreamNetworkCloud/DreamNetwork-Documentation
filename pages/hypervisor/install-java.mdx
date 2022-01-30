@@ -1,0 +1,46 @@
+# Install Java
+
+## Debian/Ubuntu & others derivatives
+
+First of all, you need to update and upgrade your system <br/>
+```sudo apt update && sudo apt upgrade```
+
+After that, you'll need to check if you have already Java installed on your system <br/>
+```java --version```
+
+If it returns nothing, you can proceed to the installation on java.
+
+### Java 8
+> Java 8 is recommended for Networks who will run **1.7.10 to 1.10.2** Minecraft versions.
+
+```sudo apt install openjdk-8-jdk```
+
+### Java 11
+> Java 11 is recommended for Networks who will run **1.10.2 to 1.16** Minecraft versions.
+
+```sudo apt install openjdk-11-jdk```
+
+### Java 17
+> Java 17 is recommended for Networks who will run **1.16 and further** Minecraft versions.
+
+```sudo apt install openjdk-17-jdk```
+
+## CentOS
+
+Update your system
+```sudo yum -y update```
+
+### Java 8
+```sudo yum install java-1.8.0-openjdk```
+
+### Java 11
+```sudo yum install java-11-openjdk```
+
+### Java 17
+
+```sudo yum -y install wget curl``` <br/><br/>
+```wget https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz```<br/><br/>
+```sudo tar xvf openjdk-17_linux-x64_bin.tar.gz```<br/><br/>
+```sudo mv jdk-17 /opt/```<br/><br/>
+```echo "export JAVA_HOME=/opt/jdk-17 export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc```<br/><br/>
+```source ~/.bashrc```
